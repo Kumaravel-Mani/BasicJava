@@ -1,0 +1,28 @@
+package Java;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+public class Duplic {
+	// Java program to remove duplicates from ArrayList
+	// Program to remove duplicates from a List in Java 8
+		public static void main(String[] args)
+		{
+			// input list with duplicates
+			List<Integer> list = new ArrayList<>(
+				Arrays.asList(1, 2,3,3,4,5));
+				// Print the Arraylist
+			System.out.println("ArrayList with duplicates: "
+							+ list);
+
+			// Construct a new list from the set constucted from elements
+			// of the original list
+			List<Integer> newList = list.stream()
+										.distinct()
+										.collect(Collectors.toList());
+
+			// Print the ArrayList with duplicates removed
+			System.out.println("ArrayList with duplicates removed: "
+							+ newList);
+		}
+	}
